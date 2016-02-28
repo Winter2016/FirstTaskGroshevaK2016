@@ -16,7 +16,10 @@ public class FirstTask extends HttpServlet{
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         PrintWriter pw = reresp.getWriter();
-        pw.write("<b> Hello " + name + "</b>");
+        if (password.equals("1234"))
+            pw.write("<b> Hello " + name + "</b>");
+        else
+            reresp.sendError(401,"Wrong password");
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
