@@ -6,26 +6,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.*;
 /**
  * Created by Ксения on 2/27/2016.
  */
 public class FirstTask extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse reresp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        String password = req.getParameter("password");
+        Date currentDate = new Date();
+        String browserName = req.getHeader("user-agent");
         PrintWriter pw = reresp.getWriter();
-        if (password.equals("1234"))
-            pw.write("<b> Hello " + name + "</b>");
-        else
-            reresp.sendError(401,"Wrong password");
+        pw.write("<b> Browser name is " + browserName + "</b>");
+        pw.write("<br> <b> Current date is " + currentDate.toString() + "</b> </br>");
     }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        String password = req.getParameter("password");
-        PrintWriter pw = resp.getWriter();
-        pw.write("<b> Hello " + name + "</b>");
+        super.doPost(req, resp);
     }
 }
