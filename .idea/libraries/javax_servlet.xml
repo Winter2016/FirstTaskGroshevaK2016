@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="javax.servlet">
+    <CLASSES>
+      <root url="file://C:/Program Files (x86)/Java/jdk1.7.0_67/javax.servlet.jar" />
+      <root url="jar://$USER_HOME$/Documents/apache-tomcat-8.0.32-windows-x64/apache-tomcat-8.0.32/lib/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/Program Files (x86)/Java/jdk1.7.0_67/javax.servlet.jar" recursive="false" />
+  </library>
+</component>
